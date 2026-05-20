@@ -313,8 +313,6 @@ void Player::printPlayerStatus()
 // =====================
 // 직업 클래스
 // =====================
-
-// 전사
 Warrior::Warrior(string name, int hp, int mp, int power, int defence)
     : Player(name, "전사", hp, mp, power, defence)
 {
@@ -326,7 +324,6 @@ void Warrior::attack()
     cout << "* 검으로 공격합니다!\n";
 }
 
-// 마법사
 Magician::Magician(string name, int hp, int mp, int power, int defence)
     : Player(name, "마법사", hp, mp, power, defence)
 {
@@ -338,7 +335,6 @@ void Magician::attack()
     cout << "* 파이어볼을 발사합니다!\n";
 }
 
-// 도적
 Thief::Thief(string name, int hp, int mp, int power, int defence)
     : Player(name, "도적", hp, mp, power, defence)
 {
@@ -350,7 +346,6 @@ void Thief::attack()
     cout << "* 단검으로 빠르게 공격합니다!\n";
 }
 
-// 궁수
 Archer::Archer(string name, int hp, int mp, int power, int defence)
     : Player(name, "궁수", hp, mp, power, defence)
 {
@@ -425,12 +420,8 @@ void Monster::attack(Player* player)
     int beforeHP = player->getHP();
     player->setHP(beforeHP - damage);
 
-    cout << player->getName() << "에게 "
-        << damage << " 데미지!\n";
-
-    cout << player->getName() << " HP: "
-        << beforeHP << " -> "
-        << player->getHP() << endl;
+    cout << player->getName() << "에게 " << damage << " 데미지!\n";
+    cout << player->getName() << " HP: " << beforeHP << " -> " << player->getHP() << endl;
 }
 
 // =====================
