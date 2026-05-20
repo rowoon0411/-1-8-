@@ -9,9 +9,6 @@ using namespace std;
 void printStatus(string name, int stat[]);
 void upgradeMenu(string name, int stat[]);
 
-// =====================
-// 아이템 구조체
-// =====================
 struct Item
 {
     string name;
@@ -20,9 +17,6 @@ struct Item
     void PrintInfo() const;
 };
 
-// =====================
-// 포션 레시피
-// =====================
 struct PotionRecipe
 {
     string potionName;
@@ -31,9 +25,6 @@ struct PotionRecipe
     void ShowRecipe() const;
 };
 
-// =====================
-// 포션 제작소
-// =====================
 class AlchemyWorkshop
 {
 private:
@@ -48,9 +39,6 @@ public:
     void OpenWorkshop();
 };
 
-// =====================
-// Player 클래스
-// =====================
 class Player
 {
 protected:
@@ -110,9 +98,6 @@ public:
     void attack() override;
 };
 
-// =====================
-// Monster 클래스
-// =====================
 class Monster
 {
 private:
